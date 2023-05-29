@@ -4,19 +4,17 @@ html, body{
 	padding: 0;
 	margin: 0;
 	overflow: hidden;
+	font-family: "Nanum Gothic", sans-serif;
+	font-weight: bold;
+	font-size: 36px;
 }
 * {
-	padding: 0.1em;
+	padding: 0;
 	margin: 0;
 }
 body {
-	display: grid;
-	grid-template-rows: 1fr 6fr 1fr;
-	font-family: "Nanum Gothic", sans-serif;
-	font-weight: bold;
 	background: black;
 	color: #9dacc7;
-	font-size: 30px;
 }
 
 @font-face {
@@ -25,34 +23,20 @@ body {
 }
 article {
 	display: flex;
-	flex-direction: column;
-	align-content: stretch;
 }
-article > * {
-	flex-grow: 1;
-	display: flex;
-	align-items: center;
-}
+
 secret {
 	color: transparent;
 }
 secret:hover {
 	color: black;
 }
-.header {
+.glow {
+  box-shadow: 0 0 10px 5px rgba(255, 255, 0, 0.5),
+              0 0 20px 10px rgba(255, 0, 0, 0.5),
+              0 0 30px 15px rgba(0, 0, 255, 0.5);
+}
 
-}
-.section {
-	display: flex;
-	width: 40em;
-	height: 20em;
-	margin: auto;
-	color: #9dacc7;
-	background: #0c162d;
-}
-.shadow {
-	box-shadow: 15px 15px 30px rgba(0,0,0,0.4), -15px -15px 30px #fff;
-}
 .roundEdge {
 	border-radius: 20px;
 }
@@ -60,29 +44,36 @@ secret:hover {
 	border: solid #272d3e 5px;
 }
 
-body {
-  font-size: 20px;
+header {
+	background: black;
+	display: flex;
+	align-items: center;
+	margin-bottom: 60px;
+	background: linear-gradient(to bottom, #000000, #333333);
+  	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.section {
-  	width: 25em;
-  	height: 30em;
-}
-@media (min-width: 768px) {
-  body {
-    font-size: 23px;
-  }
-   .section {
-  	width: 30em;
-  	height: 30em;
- }
+header *:not(img) {
+	background: linear-gradient(to right, #9dacc7, #a899ff);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
 }
 
-@media (min-width: 992px) {
-  body {
-    font-size: 30px;
-  }
-  .section {
-  	width: 35em;
-  	height: 25em;
- }
+#main {
+	display: flex;
+	flex-direction: column;
+	height: 650px;
+	width: 280px;
+	margin: auto;
+	color: #9dacc7;
+	background: #939393;
+}
+#main .post {
+	height: 200px;
+	width: 100%;
+	background: white;
+	transition: 0.2s;
+}
+#main .post:hover {
+	background: #dddddd;
+	transition: 0.3s;
 }

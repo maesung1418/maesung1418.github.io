@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="./favicon.ico"/>
     <title>정진우</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" />
   </head>
   <body>
-    <article class="header">
-      <h1 style="color: white">정진우</h1>
-      <p>1418 개발, 개허접하지만 그러려니 하셈<secret>&nbsp와 AI랑 하니까 코딩 개편하네 ㄹㅇ</secret></p>
+    <header style="overflow: hidden;height: 100px;">
+        <img src="./icon.png" style="padding: 20px">
+        <p>정진우</p>
+    </header>
+    <article class="section glow" id="main"></article>
+    <footer></footer>
     </article>
-    <article class="section roundEdge thinBorder">
-      <h2>posts</h2>
-      <p></p>
-    </article>
-    <article>
-    </article>
+    <srcs>
+      <script type="text/javascript">
+              function updateSize() {
+                var screenWidth = window.innerWidth;
+                var baseFontSize = 25; // 기본 폰트 크기
+                var scaleFactorFont = 0.01; // 폰트 크기 조정 비율
+
+                var baseMainWidth = 90; //zz
+                var scaleFactorMain = 0.5;
+
+                var fontSize = baseFontSize + (screenWidth * scaleFactorFont);
+                var mainWidth = baseMainWidth + (screenWidth * scaleFactorMain);
+                //document.body.style.fontSize = fontSize + "px";
+                document.querySelector("#main").style.width = mainWidth + "px";
+              }
+
+              // 페이지 로드시 폰트 크기 업데이트
+              updateSize();
+
+              // 창 크기가 변경될 때마다 폰트 크기 업데이트
+              window.addEventListener('resize', updateSize);
+      </script>
+      <script type="text/javascript" src="./classes.js"></script>
+      <script type="text/javascript" src="./script.js"></script>
+    </srcs>
   </body>
 </html>
