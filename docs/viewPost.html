@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>정진우</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" />
+  </head>
+  <body>
+    <header style="overflow: hidden;height: 100px;">
+        <img src="./icon.png" style="padding: 20px" onclick="location.href = './index.html'">
+        <p>정진우</p>
+    </header>
+    <article class="section glow" id="main"></article>
+    <footer></footer>
+    </article>
+    <srcs>
+      <script type="text/javascript">
+          var mainEl = document.querySelector("#main");
+          function updateSize() {
+            var screenWidth = window.innerWidth;
+            var baseFontSize = 25; // 기본 폰트 크기
+            var scaleFactorFont = 0.01; // 폰트 크기 조정 비율
+
+            var baseMainWidth = 90; //zz
+            var scaleFactorMain = 0.5;
+
+            var fontSize = baseFontSize + (screenWidth * scaleFactorFont);
+            var mainWidth = baseMainWidth + (screenWidth * scaleFactorMain);
+            document.body.style.fontSize = fontSize + "px";
+            mainEl.style.width = mainWidth + "px";
+            mainEl.style.fontSize = fontSize * 0.6 + "px";
+          }
+
+          // 페이지 로드시 폰트 크기 업데이트
+          updateSize();
+
+          // 창 크기가 변경될 때마다 폰트 크기 업데이트
+          window.addEventListener('resize', updateSize);
+      </script>
+      <script type="text/javascript" src="viewPost.js"></script>
+    </srcs>
+  </body>
+</html>

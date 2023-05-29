@@ -3,7 +3,6 @@ html, body{
 	height: 100%;
 	padding: 0;
 	margin: 0;
-	overflow: hidden;
 	font-family: "Nanum Gothic", sans-serif;
 	font-weight: bold;
 	font-size: 36px;
@@ -21,10 +20,6 @@ body {
   font-family: "Gulim";
   src: url("fonts/gulim.ttf") format("truetype");
 }
-article {
-	display: flex;
-}
-
 secret {
 	color: transparent;
 }
@@ -59,21 +54,47 @@ header *:not(img) {
 }
 
 #main {
-	display: flex;
-	flex-direction: column;
-	height: 650px;
+	height: 700px;
 	width: 280px;
 	margin: auto;
-	color: #9dacc7;
+	color: black;
+	overflow-y: auto;
 	background: #939393;
 }
-#main .post {
+.post {
+	display: flex;
 	height: 200px;
 	width: 100%;
 	background: white;
 	transition: 0.2s;
+	border-bottom: solid #00000066 3px;
+	align-items: center;
 }
-#main .post:hover {
+.post:hover {
 	background: #dddddd;
 	transition: 0.3s;
+}
+#main::-webkit-scrollbar {
+	display: none;
+}
+.firstLetter {
+	box-sizing: border-box;
+	height: 100%;
+    font-size: 150px;
+    padding: 15px;
+    display: inline-block;
+    background: linear-gradient(270deg, #c880ff, #9254f5);
+}
+.postPreview {
+	font-size: 30px;
+	padding: 10px;
+}
+.postDate {
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	padding: 10px;
+	background: linear-gradient(90deg, #00dcffd1, #7eacff);
+	color: white;
 }

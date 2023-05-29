@@ -1,23 +1,30 @@
 var mainEl = document.querySelector("#main");
-posts = getPosts();
-for (let i = posts.length - 1; i >= 0; i--) {
-	mainEl.appendChild(posts[i].cardify().element);
-}
 
-function getPosts() {
-	posts = [];
+getPosts().then(data => displayPosts(data));
+
+async function getPosts() {
+	result = [];
 
 	let i = 1;
 	while (true) {
-		data = 0;
-		fetch("./posts/" + i + ".json")
-		  .then((response) => response.json())
-		  .then((_data) => data = _data);
-		if (data == 0) break;
+		data = null;
+        await fetch("./posts/" + i + ".json")
+            .then(response => response.json())
+            .then(_data => data = _data)
+            .catch(e => {console.log(e)});
+
+        if (data == null) break;
+		i++;
+        //
 		pst = new post(document.createElement("div"), data);
-		posts.push(pst);
+		result.push(pst);
 	}
+	console.log("^^ 100% intended ^^");
+	return result;
+}
 
-	return posts;
-
+function displayPosts(posts) {
+    for (let i = posts.length - 1; i >= 0; i--) {
+        mainEl.appendChild(posts[i].cardify().element);
+    }
 }
