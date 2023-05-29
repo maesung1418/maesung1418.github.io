@@ -5,6 +5,7 @@ class post {
 	}
 	cardify(post) { //yeah its illegal word
 		this.element.setAttribute("class", "post");
+		
 		return this;
 	}
 }

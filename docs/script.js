@@ -9,16 +9,14 @@ function getPosts() {
 
 	let i = 1;
 	while (true) {
-		data = null;
+		data = 0;
 		fetch("./posts/" + i + ".json")
 		  .then((response) => response.json())
-		  .then((data) => {console.log(data); data = data;});
-		if (data == null) break;
+		  .then((_data) => data = _data);
+		if (data == 0) break;
+		pst = new post(document.createElement("div"), data);
+		posts.push(pst);
 	}
-	jsn = {};
-	posts.push(new post(document.createElement("a"), jsn));
-	posts.push(new post(document.createElement("b"), jsn));
-
 
 	return posts;
 
