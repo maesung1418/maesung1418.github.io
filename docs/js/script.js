@@ -38,4 +38,26 @@ function displayPosts(posts) {
     for (let i = posts.length - 1; i >= 0; i--) {
         mainEl.appendChild(posts[i].cardify().element);
     }
+    updateSize();
+}
+
+let attrScales = [];
+/* 
+info = {
+    styleName: [default, scale]
+}
+*/
+function resistAttrScale(el, info) {
+    attrScales.push([el, info]);
+}
+function updateScale(el, info, width) {
+    for (let x of Object.keys(info)) {
+        el.style[x] = info[x][1]*width + info[x][0] + "px";
+    }
+}
+function updateScaleAll(width) {
+    for (let i = 0; i < attrScales.length; i++) {
+        p = attrScales[i];
+        updateScale(p[0], p[1], width);
+    }
 }
