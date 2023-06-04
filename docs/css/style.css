@@ -1,0 +1,101 @@
+html, body{
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: "Nanum Gothic", sans-serif;
+	font-weight: bold;
+	font-size: 36px;
+}
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	background: black;
+	color: #9dacc7;
+}
+
+@font-face {
+  font-family: "Gulim";
+  src: url("fonts/gulim.ttf") format("truetype");
+}
+secret {
+	color: transparent;
+}
+secret:hover {
+	color: black;
+}
+.glow {
+  box-shadow: 0 0 10px 5px rgba(255, 255, 0, 0.5),
+              0 0 20px 10px rgba(255, 0, 0, 0.5),
+              0 0 30px 15px rgba(0, 0, 255, 0.5);
+}
+
+.roundEdge {
+	border-radius: 20px;
+}
+.thinBorder {
+	border: solid #272d3e 5px;
+}
+
+header {
+	background: black;
+	display: flex;
+	align-items: center;
+	margin-bottom: 60px;
+	background: linear-gradient(to bottom, #000000, #333333);
+  	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+header *:not(img) {
+	background: linear-gradient(to right, #9dacc7, #a899ff);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
+
+#main {
+	height: 700px;
+	width: 280px;
+	margin: auto;
+	color: black;
+	overflow-y: auto;
+	background: #939393;
+}
+.post {
+	display: flex;
+	height: 200px;
+	width: 100%;
+	background: white;
+	transition: 0.2s;
+	border-bottom: solid #00000066 3px;
+	align-items: center;
+}
+.post:hover {
+	background: #dddddd;
+	transition: 0.3s;
+}
+#main::-webkit-scrollbar {
+	display: none;
+}
+.firstLetter {
+	box-sizing: border-box;
+	height: 100%;
+    font-size: 150px;
+    padding: 15px;
+    display: inline-block;
+    background: linear-gradient(270deg, #c880ff, #9254f5);
+}
+.postPreview {
+	font-size: 30px;
+	padding: 10px;
+}
+.postDate {
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	padding: 10px;
+	background: linear-gradient(90deg, #00dcffd1, #7eacff);
+	color: white;
+}
+

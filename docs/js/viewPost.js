@@ -31,15 +31,3 @@ function displayPost(data) {
     txtEl.style["word-break"] = "keep-all";
     mainEl.appendChild(txtEl);
 }
-
-escapeSeqChar = "#";
-escapeSeqDict = {
-    "n": "<br>"
-}
-function escapeSeqFormat(txt) {
-    Object.keys(escapeSeqDict).forEach(key => {
-        var target = escapeSeqChar + key;
-        txt = txt.replaceAll(target, escapeSeqDict[key]);
-    })
-    return txt;
-}
