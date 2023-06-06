@@ -36,7 +36,7 @@ class post {
         el.appendChild(date);
 
         el.addEventListener("click", () => {
-        	location.href = "./viewPost.html?post="+id;
+        	location.href = "./viewPost.html?post="+this.id;
         })
 		return this;
 	}
