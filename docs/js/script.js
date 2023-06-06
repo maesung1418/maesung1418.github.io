@@ -14,9 +14,8 @@ async function getPosts() {
             .catch(e => {console.log(e)});
 
         if (data == null) break;
-		i++;
-        //
-		pst = new post(document.createElement("div"), data);
+		pst = new post(document.createElement("div"), data, i);
+        i++;
 		result.push(pst);
 	}
 	console.log("^^ 100% intended ^^");

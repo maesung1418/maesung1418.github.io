@@ -67,7 +67,7 @@ header *:not(img) {
 	width: 100%;
 	background: white;
 	transition: 0.2s;
-	border-bottom: solid #00000066 3px;
+	border-bottom: solid #f9e3ff 3px;
 	align-items: center;
 	overflow: hidden;
 }

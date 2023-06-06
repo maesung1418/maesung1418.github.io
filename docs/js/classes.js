@@ -1,7 +1,8 @@
 class post {
-	constructor(el, jsn) {
+	constructor(el, jsn, id) {
 		this.element = el;
 		this.json = jsn;
+        this.id = id;
 	}
 	cardify(post) { //yeah its illegal word
 		var el = this.element;
@@ -35,7 +36,7 @@ class post {
         el.appendChild(date);
 
         el.addEventListener("click", () => {
-        	location.href = "./viewPost.html?post=1";
+        	location.href = "./viewPost.html?post="+id;
         })
 		return this;
 	}
