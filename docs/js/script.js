@@ -24,7 +24,7 @@ async function getPosts() {
 
 escapeSeqChar = "#";
 escapeSeqDict = {
-    "n": "<br>"
+    "n": "<br>",
     "q": "\""
 }
 function escapeSeqFormat(txt) {
