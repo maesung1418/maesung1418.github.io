@@ -22,18 +22,6 @@ async function getPosts() {
 	return result;
 }
 
-escapeSeqChar = "#";
-escapeSeqDict = {
-    "n": "<br>",
-    "q": "\""
-}
-function escapeSeqFormat(txt) {
-    Object.keys(escapeSeqDict).forEach(key => {
-        var target = escapeSeqChar + key;
-        txt = txt.replaceAll(target, escapeSeqDict[key]);
-    })
-    return txt;
-}
 function displayPosts(posts) {
     for (let i = posts.length - 1; i >= 0; i--) {
         mainEl.appendChild(posts[i].cardify().element);

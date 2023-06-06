@@ -1,6 +1,7 @@
 escapeSeqChar = "#";
 escapeSeqDict = {
-    "n": "<br>"
+    "n": "<br>",
+    "q": "\""
 }
 function escapeSeqFormat(txt) {
     Object.keys(escapeSeqDict).forEach(key => {
