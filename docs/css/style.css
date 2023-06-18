@@ -101,4 +101,9 @@ header *:not(img) {
 	background: linear-gradient(90deg, #00dcffd1, #7eacff);
 	color: white;
 }
-
+.codespace {
+	background: black;
+	color: #00E3DB;
+	border-radius: 5px;
+	border: solid #272D3E 5px;
+}
