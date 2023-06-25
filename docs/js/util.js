@@ -4,7 +4,8 @@ escapeSeqDict = {
     "dn": "<br><br>",
     "q": "\"",
     "CS": "<div class=\"codespace\">",
-    "ED": "</div>"
+    "ED": "</div>",
+    "t": "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"
 }
 function escapeSeqFormat(txt) {
     Object.keys(escapeSeqDict).forEach(key => {
